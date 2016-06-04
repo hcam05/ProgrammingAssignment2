@@ -1,6 +1,6 @@
+## The functions create a matrix, inverts a matrix and caches the inverse.
+
 ## The makeCacheMatrix function creates "neo" to cache its inverse. 
-## The cacheSolve function computes the inverse.  
-## If the inverse is already computed, it grabs the cache.
 
 makeCacheMatrix <- function(x = matrix()) {
     
@@ -16,6 +16,9 @@ makeCacheMatrix <- function(x = matrix()) {
          setinverse = setinverse,
          getinverse = getinverse)
 }
+
+## The cacheSolve function computes the inverse.  
+## If the inverse is already computed, it grabs the cache.
 
 cacheSolve <- function(x, ...) {
     neo <- x$getinverse()
